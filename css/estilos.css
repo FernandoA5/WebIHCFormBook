@@ -1,0 +1,97 @@
+.centrado{
+    text-align: center;
+}
+.session-buttons{
+    color:white;
+    font-size: 15px;
+    text-decoration: none !important;
+}
+.sesion-buttons:hover{
+    color:#26A9FF;
+    background-color:white;
+}
+.barra{
+    background-color:#26A9FF;
+    padding:10px;
+    font-family: "Lucida Sans";
+    font-weight: bold;
+    font-size:30px;
+    color:#FFFFFF;
+    text-align: center;
+}
+.link{
+    position:relative;
+    display:block;
+    padding-top:30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Lucida Sans";
+    font-weight: bold;
+    color:#FFFFFF;
+    background-color: #26A9FF;
+    border: #26A9FF 5px solid;
+    text-decoration: none;
+    width: 230px;
+    white-space: nowrap;
+}
+.link:hover{
+    padding-top:30px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-family: "Lucida Sans";
+    font-weight: bold;
+    font-size: 30px;
+    color: #26A9FF;
+    background-color: #FFFFFf;
+    border: #26A9FF 5px solid;
+    text-decoration: none;
+}
+.btn-primary{
+    background-color: #26A9FF !important;
+    width: 100%;
+    height: 100px;
+    font-size: 30px !important;
+    padding-top:25px !important;
+    padding-bottom:30px !important;
+    border: #26A9FF 5px solid !important;
+}
+.btn-primary:hover{
+    background-color: #FFFFFf!important;
+    color: #26A9FF !important;
+}
+.btn-success{
+    background-color: #26A9FF !important;
+}
+.titulo{
+    text-decoration: none;
+    color:#FFFFFF;
+}
+.titulo:hover{
+    text-decoration: none;
+    color:#FFFFFF;
+}
+.panel-tema{
+    border: #26A9FF 3px solid;
+}
+.subtemas{
+    text-decoration: none;
+}
+.subtemas:hover{
+    text-decoration: none;
+}
+.panel-heading{
+    background-color: #26A9FF !important;
+}
+.info{
+    border: #26A9FF 2px solid !important;
+    text-align: center;
+    overflow: scroll;
+}
+.path{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+}
