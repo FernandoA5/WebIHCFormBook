@@ -21,7 +21,7 @@ if(isset($_POST["login"]))
   conexion::closeConnection();
 }
  ?>
- <div class="container" style="padding-top:70px">
+ <div class="container" style="padding-top:5px">
    <div class="row">
      <div class="col-md-4">
 

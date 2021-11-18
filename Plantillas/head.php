@@ -28,15 +28,29 @@
                     <span class="glyphicon glyphicon-log-in" style="color:white"></span>
                     Iniciar Sesión &nbsp
                 </a>
+                <a href="<?php echo "#"; ?>" class="session-buttons">
+                    <span class="glyphicon glyphicon-search" style="color:white"></span>
+                    Buscar
+                </a>
                 <?php
         }
         else{
 
             ?>
+            <a href="<?php echo SERVIDOR.'/'.'User/'.$_SESSION['nombre_usuario']; ?>" class="session-buttons">
+            <span class="glyphicon glyphicon-user" style="color:white"></span>
+            <?php 
+                echo $_SESSION['nombre_usuario']."&nbsp";
+            ?>
+            </a> 
             <a href="<?php echo SERVIDOR.LOGOUT; ?>" class="session-buttons">
             <span class="glyphicon glyphicon-log-out" style="color:white"></span>
-            Cerrar Sesión
-            </a>  
+            Cerrar Sesión &nbsp
+            </a>
+            <a href="<?php echo SERVIDOR.BUSCAR; ?>" class="session-buttons">
+            <span class="glyphicon glyphicon-search" style="color:white"></span>
+            Buscar
+            </a> 
             <?php
 
         }
@@ -73,5 +87,24 @@
                 }
                 //echo palabrasRaras::arreglar($partesRuta[1]);
             }
+            
         ?>
     </div>
+    <h3 class="text-center">
+        <?php
+            if(isset($partesRuta[3]))
+            {
+                conexion::openConnection();
+                $formula = RepositorioFormula::obtenerFormulaPorNombre(conexion::getConnection(), $partesRuta[3]);
+                conexion::closeConnection();
+                echo $formula->obtenerTags();
+            }
+            else if(isset($partesRuta[2])){
+                echo palabrasRaras::arreglar($partesRuta[2]);
+            }
+            else{
+                echo palabrasRaras::arreglar($partesRuta[1]);
+            }
+        ?>
+    </h3><br>
+    

@@ -92,6 +92,14 @@
 }
 .path{
     padding-top: 25px;
-    padding-bottom: 25px;
+    padding-bottom: 5px;
     text-align: center;
+}
+.escritor_formulas{
+    text-decoration: none;
+    color:white;
+}
+.escritor_formulas:hover{
+    text-decoration: none;
+    color:white;
 }

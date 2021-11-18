@@ -24,7 +24,7 @@
   }
 ?>
 
-<div class="container" style="padding-top:70px">
+<div class="container" style="padding-top:5px">
   <div class="row">
     <div class="col-md-12">
       <div class="panel panel-primary">

@@ -11,6 +11,7 @@ define("REGISTRAR", "/Registrar");
 define("REGISTROCORRECTO", "/RegistroCorrecto");
 define("LOGIN", "/Login");
 define("LOGOUT", "/Logout");
+define("BUSCAR", "/Buscar");
 
 //SOURCES
 define("RUTACSS", SERVIDOR . "/css/");

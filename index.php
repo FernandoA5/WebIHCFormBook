@@ -43,6 +43,12 @@ if($partesRuta[1]=="generarUrl")
   include_once "scripts/generarUrl.inc.php";
   $encontrada=1;
 }
+if($partesRuta[1]=="Buscar")
+{
+  include_once "vistas/Buscar.php";
+  $encontrada=1;
+}
+
 conexion::openConnection();
 $connection=conexion::getConnection();
 

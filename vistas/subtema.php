@@ -28,7 +28,7 @@
             {
             ?>
             </div>
-            <div class="row">    
+            <div class="row" style="padding-bottom:25px">    
                 <div class="col-md-3" >
                     <div>
                             <a href="<?php echo SERVIDOR."/".$tema."/".$subtema."/".$nombre; ?>" class="btn btn-primary" title="<?php echo $formulas[$i]->obtenerTags(); ?>">

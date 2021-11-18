@@ -40,8 +40,17 @@ class RepositorioFormula{
         sort($temas);
         return $temas;
     }
-
-
+    public static function obtenerSubtemas($formulas)
+    {
+        $subtemas=array();
+        for($i=0; $i<sizeof($formulas); $i++)
+        {
+            $subtemas[$i]=$formulas[$i]->obtenerSubtema();
+        }
+        $subtemas=array_unique($subtemas);
+        sort($subtemas);
+        return $subtemas;
+    }
     public static function temaExiste($connection, $tema){
         $tema=palabrasRaras::arreglar($tema);
         $temas=RepositorioFormula::obtenerTemas($connection);
@@ -108,15 +117,6 @@ class RepositorioFormula{
         }
         return $formulas;
     }
-    public static function obtenerSubtemas($formulas)
-    {
-        $subtemas=array();
-        for($i=0; $i<sizeof($formulas); $i++)
-        {
-            $subtemas[$i]=$formulas[$i]->obtenerSubtema();
-        }
-        return array_unique($subtemas);
-    }
     public static function obtenerFormulas($connection, $subtema)
     {
         $temas=array();
@@ -146,6 +146,29 @@ class RepositorioFormula{
             }
         }
         return $formulaExiste;
+    }
+    public static function obtenerFormulaPorNombre($connection, $nombre)
+    {
+        $formula=null;
+        if(isset($connection))
+        {
+            try{
+                $sql="SELECT * FROM formulas WHERE nombre=:nombre";
+                $sentencia = $connection -> prepare($sql);
+                $sentencia -> bindParam(":nombre", $nombre, PDO::PARAM_STR);
+                $sentencia -> execute();
+                $resultado = $sentencia -> fetch();
+                if(!empty($resultado))
+                {
+                    $formula = new Formula($resultado["id"], $resultado["nombre"], $resultado["subtema"], $resultado["tema"], $resultado["tags"], $resultado["descripcion"]);
+                }
+            }catch(PDOException $ex) 
+            { 
+                print HOLIERROR . $ex->getMessage(); 
+            }
+        }
+        return $formula;
+
     }
     public static function resumirTitulo($titulo)
     {

@@ -7,7 +7,7 @@ $page = parse_url($_SERVER["REQUEST_URI"]);
 $ruta=$page["path"];
 $partesRuta=explode("/", $ruta);
 
-conexion::getConnection();
+
 ?>
 <div class="container">
     <div class="row">
@@ -40,14 +40,14 @@ conexion::getConnection();
                 <h3>Descripción:</h3>
                 <img src="<?php
                     echo RUTAIMAGENES."/exp-".$partesRuta[3].".png";
-                ?>" alt="<?php echo RUTAIMAGENES."/exp-".$partesRuta[3].".png"; ?>">
+                ?>" alt="<?php echo RUTAIMAGENES."/exp-".$partesRuta[3].".png"; ?>" width=100%>
             </div>
             <br>
             <div class="info">
                 <h3>Ejemplo:</h3>
                 <img src="<?php
                     echo RUTAIMAGENES."/inst-".$partesRuta[3].".png";
-                ?>" alt="<?php echo RUTAIMAGENES."/inst-".$partesRuta[3].".png"; ?>" width:100%>
+                ?>" alt="<?php echo RUTAIMAGENES."/inst-".$partesRuta[3].".png"; ?>" width=100%>
             </div>
             <br>
             <div class="video">

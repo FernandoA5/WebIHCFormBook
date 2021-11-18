@@ -40,7 +40,7 @@ $partesRuta=explode("/", $ruta);
         <div class="col-sm-8 panel-tema">
                     <h3 class="centrado" style="padding-top:30px">Descripción</h3>
                     <br>
-                    <h4 style="padding-left:40px">
+                    <h4 style="padding-left:40px; padding-right: 40px; padding-bottom:40px">
                         <?php
                             echo $formulas[0]->obtenerDescripcion();
                         ?>

@@ -12,7 +12,7 @@ if($_GET["nombre"] && !empty($_GET["nombre"]))
 {
   //echo $_GET["nombre"];
   ?>
-  <div class="container" style="padding-top:70px">
+  <div class="container" style="padding-top:5px">
     <div class="row">
       <div class="col-md-4">
 
